@@ -68,7 +68,7 @@ define(["exports", "module", "react", "./OverlayMixin", "./utils/domUtils", "./u
         isOverlayShown: true
       }, function () {
         this.updateOverlayPosition();
-        this.onShow(this);
+        this.props.onShow(this);
       });
     },
 

@@ -3352,7 +3352,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      isOverlayShown: true
 	    }, function () {
 	      this.updateOverlayPosition();
-	      this.onShow(this);
+	      this.props.onShow(this);
 	    });
 	  },
 

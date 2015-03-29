@@ -60,7 +60,7 @@ const OverlayTrigger = React.createClass({
       isOverlayShown: true
     }, function() {
       this.updateOverlayPosition();
-      this.onShow(this);
+      this.props.onShow(this);
     });
   },
 
