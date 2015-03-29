@@ -23,7 +23,8 @@ const TabbedArea = React.createClass({
   propTypes: {
     bsStyle: React.PropTypes.oneOf(['tabs','pills']),
     animation: React.PropTypes.bool,
-    onSelect: React.PropTypes.func
+    onSelect: React.PropTypes.func,
+    onAnimateOutEnd: React.PropTypes.func
   },
 
   getDefaultProps() {
@@ -58,6 +59,9 @@ const TabbedArea = React.createClass({
     this.setState({
       previousActiveKey: null
     });
+    if (typeof this.props.onAnimateOutEnd === 'function') {
+      this.props.onAnimateOutEnd();
+    }
   },
 
   render() {
